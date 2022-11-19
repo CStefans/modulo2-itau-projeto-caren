@@ -8,12 +8,16 @@ public class BoxMain {
         Box box = new Box();
         box.inserirConteudo(99);
         box.imprimirConteudo();
+
+        BoxGenerics<Double> box2 = new BoxGenerics<>();
+        box2.inserirConteudo(2.0);
+        box2.imprimirConteudo();
         
         List nomes = new ArrayList();
         nomes.add("caren");
         nomes.add("ralph");
         nomes.add("Loki");
-        nomes.add(99);
+        nomes.add(88);
 
         for (int i=0; i <nomes.size(); i++){
             if(nomes.get(i) instanceof String) {
@@ -21,5 +25,14 @@ public class BoxMain {
                 System.out.println(nome);
             }
         }
+    }
+
+    //com extends eh de string pra baixo com o super eh de strings pra cima
+    public void imprimirListString(List<? super String> nomes){
+
+    }
+
+    public <T extends Number> void imprimirValor(T valor) {
+
     }
 }
