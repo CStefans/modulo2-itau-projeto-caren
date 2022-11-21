@@ -25,10 +25,12 @@ public class BoxMain {
                 System.out.println(nome);
             }
         }
+
+        imprimirListString(nomes);
     }
 
-    //com extends eh de string pra baixo com o super eh de strings pra cima
-    public void imprimirListString(List<? super String> nomes){
+    //com extends eh de CharSeq pra baixo com o super eh de CharSeq pra cima - no exemplo funciona pra super e nao pra extends
+    public static void imprimirListString(List<? super CharSequence> nomes){
 
     }
 
